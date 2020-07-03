@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(40,40,40);
+}
+.ret{
+	left: 88%;
+	top: 30px;
+	position: relative;
+	width: 10%;
+	height: 30px;
+	background-color: rgb(180,0,0);
+	text-align: center;
+    box-shadow: 0 0 2px;
+    color: whitesmoke;
+	transition: all 0.5s linear;
+}
+.ret:hover{
+	transform: scale(1.1);
+}
+.ret input{
+		   background-color:  rgb(180,0,0);
+           color:  whitesmoke;  
+           border: 0;
+}
+.table table{
+    text-align: center;
+    margin: auto;
+    margin-top: 250px;
+    color: antiquewhite;
+    font-size: 20px;
+    width: 30%;
+}
+.table input{
+    font-size: 20px;
+    text-align: center;
+}
+.table select{
+    font-size: 20px;
+}
+.bro{
+    position: relative;
+    left: 44%;
+    top: 50px;
+    width: 200px;
+    height: 40px;
+}
+.bro input{
+    
+    font-size: 20px;
+    background-color: royalblue;
+    /* height: 20px; */
+    /* border: 0; */
+    width: 200px;
+    height: 40px;
+    /* border-radius: 5px; */
+    box-shadow: black 1px 1px 1px 1px;
+}

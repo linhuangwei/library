@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(40,40,40);
+}
+ .searchBar input{
+	 position: relative;
+	 width: 40%;
+	 height: 30px;
+	 top: 30px;
+	 left: 420px;
+}
+.searchBtn input{
+	 position: relative;
+	 width: 10%;
+	 left: 56.5%;
+	 height: 30px;
+	 top: -2px;
+}
+.ret{
+	left: 88%;
+	top: -30px;
+	position: relative;
+	width: 124px;
+	height: 30px;
+	background-color: rgb(180,0,0);
+	text-align: center;
+	color: whitesmoke;
+    box-shadow: 0 0 2px;
+	transition: all 0.5s linear;
+}
+.ret:hover{
+	transform: scale(1.1);
+}
+.ret a{
+		   text-decoration: none;
+		   color:  whitesmoke;
+		   display: block;
+		   width: 124px;
+		   height: 30px;
+	   
+}
+.table table{
+	 text-align: center;
+	 margin: auto;
+	 color: antiquewhite;
+	 font-size: 20px;
+	 width: 80%;
+}
+
+a{
+	 text-decoration:none;
+	 color:  whitesmoke;
+	 
+}
+P{
+	color: bisque;
+	text-align: center;
+}
+.goBar{
+	position: relative;
+	text-align: center;
+}
+.goBar input{
+	height: 23px;
+}
+.goBtn{
+	position: relative;
+	text-align: center;
+	top:0px;
+	width: 40px;
+	height: 20px;
+	left: 850px;
+	top:-27px;
+}
+.goBtn input{
+	font-size: 20px;
+}
+.go{
+	color: whitesmoke;
+	position: relative;
+	/* float:right; */
+	left: 650px;
+}
+.go a{
+	color: whitesmoke;
+}

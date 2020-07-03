@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+<body style="zoom:1; transform: scale(5);">
+    <div class="0" style="margin-left:90px;text-align:center;font-size:30px;margin-top: 1000px;">
+    <input type="text" placeholder="输入书本名" id="bookName"><br>
+    <input type="text" placeholder="输入ISBN" id="ISBN"><br>
+    <input type="text" placeholder="输入出版社" id="pubHouse"><br>
+    <input type="text" placeholder="输入图书类型" id="bookType"><br>
+    <input type="text" placeholder="输入书本价格" id="bookPrice"><br>
+    <input type="text" placeholder="输入书本数量" id="bookNum"><br>
+    <button id="btn">提交</button>
+    <p id="show"></p>
+</div>
+    <script>
+        var btn=document.getElementById("btn");
+
+        var bookName=document.getElementById("bookName");
+        var ISBN=document.getElementById("ISBN");
+        var pubHouse=document.getElementById("pubHouse");
+        var bookType=document.getElementById("bookType");
+        var bookPrice=document.getElementById("bookPrice");
+        var bookNum=document.getElementById("bookNum");
+        var show=document.getElementById("show");
+        
+
+
+        btn.onclick=function(){
+            
+        var bookNameV=bookName.value;
+        var ISBNV = ISBN.value;
+        var pubHouseV = pubHouse.value;
+        var bookTypeV = bookType.value;
+        var bookPriceV = bookPrice.value;
+        var bookNumV = bookNum.value;
+        
+        if(bookNameV == "" || ISBNV == ""|| pubHouseV == ""|| bookTypeV == ""|| bookPriceV == ""|| bookNumV == ""){
+            alert('输入未完整!');
+            window.history.back();
+        }else{
+
+        //创建一个XMLHttpReuqest对象
+        if(window.XMLHttpRequest){
+            var xhr=new XMLHttpRequest()    
+
+        }else {
+            //兼容低版本的IE浏览器
+            var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //传递参数
+        //参数：get/post,发送地址，是否异步
+        xhr.open('GET','http://192.168.43.87:5555?bookName='+bookNameV+'&ISBN='+ISBNV+'&pubHouse='+pubHouseV+'&bookType='+bookTypeV+'&bookPrice='+bookPriceV+'&bookNum='+bookNumV+'');
+        xhr.send();//发送
+
+        //等待的过程
+        
+        //等待接听的回馈
+        xhr.onreadystatechange=function(){
+            //判断等等待过程，0---4 4的时候就已经接通了
+            if(xhr.readyState==4){
+                //判断http状态码:在200和300之间，不包括300 ，304缓存
+                if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+                    //返回值内容
+                    // console.log(xhr.responseText);
+                    var a = xhr.responseText;
+                    alert(a);
+                    if(a == "增加成功"){
+                        window.location.reload();
+                    }else{
+                        window.history.back();
+                    }
+                   
+                    // show.innerHTML=xhr.responseText;
+                }else{
+                    console.log('服务器错误');
+                }
+            }
+        }
+    }
+  
+
+   
+    
+}
+
+    </script>
+</body>
+</html>

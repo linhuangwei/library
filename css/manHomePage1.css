@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/login1.jpg);
+    overflow: hidden;
+    /* background-size: cover; */
+}
+.btn1{
+    top: 100px;
+    left: 120px;
+    width:280px;
+    height: 60px;
+    position: relative;
+    /* background-color: red; */
+}
+/* 查看所有图书 */
+.btn1 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;
+    /* background-color: red; */
+    transition: all 0.5s linear;
+}
+.btn1 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* 增加图书 */
+.btn2{
+    position: relative;
+    /* background-color: red; */
+    top: -200px;
+    left: 420px;
+    width: 280px;
+    height: 60px;
+}
+.btn2 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+   
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;transition: all 0.5s linear;
+}
+.btn2 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* 管理所有用户 */
+.btn3{
+    position: relative;
+    top: 130px;
+    left: 120px;
+    width: 280px;
+    height: 60px;
+    /* background-color: green; */
+}
+.btn3 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6; opacity: 0.6;transition: all 0.5s linear;
+}
+.btn3 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 增加管理员 */
+.btn4{
+    position: relative;
+    top: -170px;
+    left: 420px;
+    width: 280px;
+    height: 60px;
+    /* background-color: red; */
+   
+}
+.btn4 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6; opacity: 0.6;transition: all 0.5s linear;
+}
+.btn4 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 注销 */
+.btn5{
+    position: relative;
+    top: -445px;
+    left: 250px;
+    width: 300px;
+    height: 30px;
+    /* background-color: red; */
+}
+.btn5 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6; opacity: 0.6;transition: all 0.5s linear;
+}
+.btn5 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* 罚款表 */
+.btn6{
+    position: relative;
+    width: 280px;
+    height: 60px;
+    /* background-color: green; */
+    left: 120px;
+    top: 160px;
+}
+.btn6 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.5s linear;
+}
+.btn6 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 借阅表 */
+.btn7{
+    position: relative;
+    top: -380px;
+    width: 650px;
+    height: 200px;
+    left: 750px;
+    /* background-color: green; */
+}
+.btn7 button{
+    background-image: url(img/book.jpg);
+    position: relative;
+    float: right;
+    background-size: cover;
+    width: 650px;
+    height: 200px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s linear;
+}
+.btn7 button:hover{
+    transform: scale(1.02);
+    opacity: 1;
+}
+
+/* 增加图书类型 */
+
+/* 增加学校 */
+.btn9{
+    position: relative;
+    /* background-color: green; */
+    width: 280px;
+    height: 60px;
+    top: -70px;
+    left: 420px;
+}
+.btn9 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    
+    float:right;
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.5s linear;
+}
+.btn9 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 增加出版社 */
+
+/* 借书 */
+.btn11{
+    position: relative;
+    width: 650px;
+    height: 200px;
+    left: 750px;
+    top: -425px;
+    /* background-color: green; */
+}
+.btn11 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    width: 650px;
+    height: 200px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s linear;
+}
+.btn11 button:hover{
+    transform: scale(1.02);
+    opacity: 1;
+}
+/* 读者借阅排名 */
+.btn12{
+    position: relative;
+    width: 280px;
+    height: 60px;
+    top:190px;
+    /* background-color: green; */
+    left: 120px;
+}
+.btn12 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+    
+    /* float:right; */
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.5s linear;
+}
+.btn12 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* 书本借阅排名 */
+.btn13{
+    position: relative;
+    width: 280px;
+    height: 60px;
+    top:40px;
+    /* background-color: green; */
+    left: 420px;
+}
+.btn13 button{
+    background-image: url(img/login1.jpg);
+    position: relative;
+   
+    /* float:right; */
+    width: 280px;
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    opacity: 0.6;
+    transition: all 0.5s linear;
+}
+.btn13 button:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}

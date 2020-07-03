@@ -1,0 +1,179 @@
+                        // res.end(bId);
+ //这是增加的                      
+ var sql2 = 'insert into book(bookName,ISBN,pubHouse,bookType,bookStatus,bookPrice,bookNum) value("'+urlJson.bookName+'",'+urlJson.ISBN+','+pubId+','+bId+','+"1"+','+urlJson.bookPrice+','+urlJson.bookNum+');';
+ var optionArr2 = [];
+            connect.query(sql2, optionArr2, function (err, data) {
+                if (err) {
+                    console.log('错误类型：' + err);
+                } else {
+                  res.end("增加成功");
+                }
+            })//这是增加的
+
+//用户表格
+create table user(
+broNum varchar(20) primary key,
+userPhone varchar(11),
+userName varchar(10),
+school int,
+sex int,
+homeAddress varchar(100));
+
+insert into user values
+("lgq13774808628","13774808648","林贵全","1","1","永春吾峰");
+
+insert into user values
+("lgq13774808248","13774808648","林贵全","1","1","永春吾峰");
+
+insert into user values
+("lgq13774818648","13774808648","林贵全","1","1","永春吾峰");
+
+//性别类别
+create table sex(
+id int,
+sexName varchar(2)
+);
+insert into sex values(1,"男");
+insert into sex values(2,"女");
+
+
+//书本表格 书本类型有很多，图书状态，已借阅，在库，挂失
+create table book(
+bookId int primary key auto_increment,
+bookName varchar(20),
+ISBN varchar(20),
+pubHouse int, 出版社，用id存储
+bookType int, 图书类型，用id存储
+bookStatus int, 图书状态，用id存储
+bookPrice float,
+bookNum int);
+
+//新的书本类型
+create table book(
+bookId int primary key auto_increment,
+bookName varchar(20),
+ISBN varchar(20),
+pubHouse varchar(20),
+bookType varchar(20),
+bookStatus varchar(20),
+bookPrice varchar(20),
+bookNum int);
+
+insert into book(bookName,ISBN,pubHouse,bookType,bookStatus,
+bookPrice,bookNum) values
+("老人与海","151354894515","哈哈","嘿嘿","一二","45.2","10");
+
+insert into book(bookName,ISBN,pubHouse,bookType,bookStatus,
+bookPrice,bookNum) values
+("老人与海1","151354894515","哈哈","嘿嘿","一3","45.2","10");
+
+insert into book(bookName,ISBN,pubHouse,bookType,bookStatus,
+bookPrice,bookNum) values
+("老人与海2","151354894515","一三","嘿嘿","一3","45.2","10");
+
+//图书状态表 1.在库 2.已借阅 3.丢失
+create table bookStatus(
+staId int,
+staName varchar(5)
+)
+insert into bookStatus values(
+"1","在库"
+);
+insert into bookStatus values(
+"2","已借阅"
+);
+insert into bookStatus values(
+"3","丢失"
+);
+
+
+//图书类型表
+create table bookType(
+bid int primary key not null auto_increment,
+bName varchar(20)
+)
+
+insert into bookType(bName) values(
+"科学技术"
+);
+insert into bookType(bName) values(
+"人文地理"
+);
+insert into bookType(bName) values(
+"基本常识"
+);
+
+
+
+//借阅 
+create table broBook(
+id int primary key auto_increment,
+bookName varchar(20),
+ISBN varchar(20),
+userName varchar(10),
+broNum varchar(20),
+broTime varchar(20),
+retTime varchar(20)
+);
+
+
+//学校
+create table school(
+schId int primary key not null auto_increment,
+schName varchar(20)
+)
+
+insert into school(schName) values(
+"吾峰中心小学"
+);
+insert into school(schName) values(
+"吾中小学"
+);
+insert into school(schName) values(
+"吾西小学"
+);
+
+
+//出版社
+create table pubHouse(
+pubId  int primary key not null auto_increment,
+pubName varchar(20)
+)
+
+insert into pubHouse(pubName) values(
+"中华出版社"
+);
+insert into pubHouse(pubName) values(
+"商务出版社"
+);
+insert into pubHouse(pubName) values(
+"人民出版社"
+);
+
+
+//罚款
+create table theFine(
+tId int primary key auto_increment,
+broNum varchar(15),
+bookName varchar(20),
+finePrice float,
+fineTime varchar(20)
+);
+
+
+//管理员 1.超级管理员 2.普通管理员
+create table manage(
+phone varchar(11) primary key,
+password varchar(20),
+identity int);
+
+insert into manage values(
+"13774808648",
+"123456",
+1
+);
+insert into manage values(
+"18859688853",
+"123456",
+2
+);
